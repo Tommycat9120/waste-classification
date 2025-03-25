@@ -1,27 +1,58 @@
-AI-Powered Waste Classification 🚀♻️
-This project leverages an AI-driven image classification model to automate waste sorting, distinguishing between organic and recyclable materials. By addressing inefficiencies in current waste management systems, our model helps reduce landfill dependency, lower costs, and promote sustainability.
+# AI-Powered Waste Classification ♻️
 
-🔹 Key Features
-Deep Learning Model: Utilizes a fine-tuned VGG16 model for high-accuracy waste classification (92% accuracy).
+## Overview
+This project implements an **AI-driven waste classification model** to automate the sorting of organic and recyclable waste. Using a deep learning approach, we aim to enhance efficiency in waste management systems, reducing landfill dependency and promoting sustainability.
 
-Robust Dataset: Trained on 22,500 images from Mendeley and Kaggle datasets, ensuring diverse waste recognition.
+## Features 🚀
+- **Deep Learning-Based Model**: Utilizes a fine-tuned **VGG16** architecture for waste classification.
+- **High Accuracy**: Achieves **92% accuracy**, outperforming benchmark models.
+- **Robust Dataset**: Trained on **22,500 labeled images** from **Mendeley** and **Kaggle** datasets.
+- **Scalable Deployment**: Designed for integration with **smart bins, IoT systems, and waste management infrastructure**.
+- **Sustainability Impact**: Reduces pollution, labor costs, and improves recycling efficiency.
 
-Scalable Deployment: Designed for integration with smart bins, IoT systems, and waste management infrastructure.
+## Dataset 📊
+We used the following dataset for training:
+- **Kaggle Waste Classification data**: https://www.kaggle.com/datasets/techsash/waste-classification-data 
 
-Sustainability Impact: Automates sorting, reduces pollution, and supports a circular economy.
+## Model Architecture 🧠
+- **Base Model**: Pre-trained **VGG16** on ImageNet.
+- **Modifications**: Final layers replaced for **binary classification** (organic vs. recyclable).
+- **Optimization**: Freezing early layers, training only the final classification layer.
+- **Alternatives Considered**: ResNet50 (higher accuracy, computationally expensive), MobileNetV2 (efficient but lower accuracy).
 
-🔹 Deployment Options
-Embedded AI in smart waste bins
+## Implementation 🛠️
+1. **Data Preprocessing**
+   - Resize images to **224x224 pixels**.
+   - Normalize pixel values.
+   - Apply **data augmentation** (rotation, flipping, brightness adjustments).
+2. **Model Training**
+   - Split dataset into **training (80%)**, **validation (20%)**, and **testing (15%)**.
+   - Train the model using **cross-entropy loss and Adam optimizer**.
+   - Evaluate using **accuracy, precision, recall, and F1-score**.
+3. **Results**
+   - Outperforms **LeNet benchmark (0.89 accuracy) with 0.92 accuracy**.
 
-Cloud-based IoT-enabled waste sorting
+## Deployment 🔧
+Possible deployment strategies:
+- **Smart Bins**: AI-powered waste sorting in public and private spaces.
+- **Cloud-Based AI**: Real-time classification through IoT-enabled devices.
+- **Recycling Plants**: Integration with **conveyor belts** and **robotic arms** for automated sorting.
 
-Integration with automated recycling facilities
+## Challenges & Future Improvements 🚧
+- **Handling Mixed Waste**: Enhancing model robustness for images containing multiple waste types.
+- **Scalability**: Ensuring real-time performance on edge devices.
+- **Ethical Considerations**: Addressing data privacy concerns for public waste collection.
+- **Model Compression**: Exploring **lightweight models** for mobile and embedded deployment.
 
-🔹 Challenges & Future Improvements
-Enhancing real-time classification in mixed waste scenarios
+## Contributors 👥
+- **Alex Calfee** 
+- **Ananya Awasthi** 
+- **Tanya Singh** 
+- **Tom Xie** 
+- **Yaxuan Qi** 
 
-Addressing dataset biases for global applicability
+## Contact 📬
+For questions or collaborations, feel free to reach out to any of the contributors or open an issue on GitHub!
 
-Exploring model compression for edge device deployment
-
-This project provides an innovative AI solution to transform waste management and promote a greener future! 🌍♻️✨
+---
+💡 *Help us revolutionize waste management with AI!* 🚀🌱
